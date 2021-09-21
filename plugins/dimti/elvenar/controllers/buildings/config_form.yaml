@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Building
+
+# Model Form Field configuration
+form: $/dimti/elvenar/models/building/fields.yaml
+
+# Model Class name
+modelClass: Dimti\Elvenar\Models\Building
+
+# Default redirect location
+defaultRedirect: dimti/elvenar/buildings
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: dimti/elvenar/buildings/update/:id
+    redirectClose: dimti/elvenar/buildings
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: dimti/elvenar/buildings
+    redirectClose: dimti/elvenar/buildings
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

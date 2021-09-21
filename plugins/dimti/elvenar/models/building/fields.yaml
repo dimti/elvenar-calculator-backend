@@ -1,0 +1,9 @@
+fields:
+    id:
+        label: ID
+        disabled: true
+        type: text
+    name:
+        label: Text
+        span: auto
+        type: text

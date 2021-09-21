@@ -1,0 +1,21 @@
+plugin:
+  name: 'Elvenar calculator API'
+  author: 'dimti[dot]ru'
+  icon: oc-icon-pencil
+  homepage: 'https://github.com/dimti/elvenar-calculator-backend.git'
+navigation:
+  elvenar:
+    label: 'Elvenar'
+    url: dimti/elvenar/buildings
+    icon: icon-pencil
+    order: 500
+    permissions:
+      - 'dimti.elvenar.*'
+    sideMenu:
+      buildings:
+        label: 'Постройки'
+        url: dimti/elvenar/buildings
+        icon: icon-cart-plus
+        order: 10
+        permissions:
+          - 'dimti.elvenar.*'

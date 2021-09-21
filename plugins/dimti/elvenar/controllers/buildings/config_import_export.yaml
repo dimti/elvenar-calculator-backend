@@ -1,0 +1,13 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+import:
+  title: Import
+  modelClass: Dimti\Elvenar\Models\BuildingImport
+  list: $/dimti/elvenar/models/building/columnsexport.yaml
+
+export:
+  title: Export
+  modelClass: Dimti\Elvenar\Models\BuildingExport
+  list: $/dimti/elvenar/models/building/columnsexport.yaml

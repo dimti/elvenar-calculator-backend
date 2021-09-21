@@ -1,0 +1,21 @@
+#!/bin/bash
+PLUGINS=( dimti/elvenar )
+THEME="demo"
+THEME_DIRS=("layouts" "pages" "partials")
+export WEB_GID=33
+
+perms() {
+  sudo chown -R $UID:$WEB_GID "$1"
+
+  sudo chmod -R g+rwx "$1"
+}
+
+perms "storage"
+
+for DIR in "${THEME_DIRS[@]}"; do
+  perms "themes/$THEME/$DIR"
+done
+
+for DIR in "${PLUGINS[@]}"; do
+  perms "plugins/$DIR"
+done
