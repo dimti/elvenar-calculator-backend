@@ -36,5 +36,6 @@ package-lock.json
 /plugins/rainlab
 /plugins/winter
 /plugins/octobro
+/plugins/dimti/listextend
 
 # Additional assets dist ignores

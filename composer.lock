@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "01952d36f86a8818dfd28b09d496fd0b",
+    "content-hash": "ff9a20c0815c47cc58a925c48f85d5df",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -549,6 +549,51 @@
                 }
             ],
             "time": "2021-05-24T12:41:47+00:00"
+        },
+        {
+            "name": "dimti/listextend-plugin",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dimti/listextend-plugin.git",
+                "reference": "19602d292008b36b6f5cdb90d541ac61ac6456d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dimti/listextend-plugin/zipball/19602d292008b36b6f5cdb90d541ac61ac6456d1",
+                "reference": "19602d292008b36b6f5cdb90d541ac61ac6456d1",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "default-branch": true,
+            "type": "october-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Demidov",
+                    "email": "demidov@dimti.ru"
+                }
+            ],
+            "description": "Additional backend list columns",
+            "keywords": [
+                "backend",
+                "cms",
+                "columns",
+                "edit",
+                "list",
+                "october",
+                "plugin"
+            ],
+            "support": {
+                "issues": "https://github.com/dimti/listextend-plugin/issues",
+                "source": "https://github.com/dimti/listextend-plugin/tree/master"
+            },
+            "time": "2021-08-13T08:58:10+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -8867,13 +8912,14 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "octobro/api": 20,
-        "barryvdh/laravel-ide-helper": 20
+        "barryvdh/laravel-ide-helper": 20,
+        "dimti/listextend-plugin": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.2.9, >=7.2.9, >=7.0, >=5.5.9, >=5.5.9, >=5.5.9, >=5.5.9, >=5.4, >=7.0"
+        "php": ">=7.2.9"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.1.0"
 }
