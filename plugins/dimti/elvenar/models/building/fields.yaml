@@ -1,9 +1,18 @@
 fields:
     id:
         label: ID
+        span: right
         disabled: true
         type: text
     name:
-        label: Text
-        span: auto
+        label: dimti.elvenar::lang.fields.name
+        span: left
         type: text
+        required: true
+    building_type:
+        label: dimti.elvenar::lang.fields.building_type
+        span: left
+        type: dropdown
+        options: getBuildingTypeOptions
+        required: true
+        emptyOption: dimti.elvenar::lang.fields.choose_option

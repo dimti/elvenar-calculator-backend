@@ -1,6 +1,8 @@
 <?php namespace Dimti\Elvenar\Models;
 
+use Dimti\Elvenar\Classes\BuildingType;
 use Model;
+use Winter\Storm\Database\Builder;
 
 /**
  * Building Model
@@ -25,6 +27,7 @@ class Building extends Model
     protected $fillable = [
         'id',
         'name',
+        'building_type',
     ];
 
     /**
@@ -74,4 +77,23 @@ class Building extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+    /**
+     * @param BuildingType $buildingType
+     * @throws \ErrorException
+     */
+    final public function setBuildingTypeAttribute(BuildingType $buildingType): void
+    {
+        $this->attributes['building_type'] = $buildingType->getBuildingType();
+    }
+
+    public function getBuildingTypeOptions()
+    {
+        return collect(BuildingType::$buildingTypesLabels)->map(fn ($label) => \Lang::get($label))->toArray();
+    }
+
+    public function scopeBuildingType(Builder $query, string $buildingType)
+    {
+        $query->whereBuildingType($buildingType);
+    }
 }

@@ -1,0 +1,6 @@
+scopes:
+  building_type:
+    label: dimti.elvenar::lang.fields.building_type
+    modelClass: Dimti\Elvenar\Models\Building
+    options: getBuildingTypeOptions
+    conditions: building_type in (:filtered)

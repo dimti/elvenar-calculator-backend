@@ -1,6 +1,7 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('dimti/elvenar/buildings') ?>">Buildings</a></li>
+        <li><a href="<?= Backend::url('dimti/elvenar/buildings') ?>"
+            ><?= \Lang::get('dimti.elvenar::lang.common.buildings') ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -20,28 +21,30 @@
                     data-request="onSave"
                     data-request-data="redirect:0"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="Saving Building..."
+                    data-load-indicator="<?= \Lang::get('dimti.elvenar::lang.buttons.saving_building') ?>"
                     class="btn btn-primary">
-                    <u>S</u>ave
+                    <?= \Lang::get('dimti.elvenar::lang.buttons.save') ?>
                 </button>
                 <button
                     type="button"
                     data-request="onSave"
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="Saving Building..."
+                    data-load-indicator="<?= \Lang::get('dimti.elvenar::lang.buttons.saving_building') ?>"
                     class="btn btn-default">
-                    Save and Close
+                    <?= \Lang::get('dimti.elvenar::lang.buttons.save_and_close') ?>
                 </button>
                 <button
                     type="button"
                     class="oc-icon-trash-o btn-icon danger pull-right"
                     data-request="onDelete"
-                    data-load-indicator="Deleting Building..."
-                    data-request-confirm="Delete this building?">
+                    data-load-indicator="<?= \Lang::get('dimti.elvenar::lang.buttons.deleting_building') ?>"
+                    data-request-confirm="<?= \Lang::get('dimti.elvenar::lang.buttons.are_you_sure_delete_this_build?') ?>">
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('dimti/elvenar/buildings') ?>">Cancel</a>
+                    <?= \Lang::get('dimti.elvenar::lang.buttons.or') ?> <a
+                            href="<?= Backend::url('dimti/elvenar/buildings') ?>"
+                    ><?= \Lang::get('dimti.elvenar::lang.buttons.cancel') ?></a>
                 </span>
             </div>
         </div>
@@ -51,6 +54,7 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('dimti/elvenar/buildings') ?>" class="btn btn-default">Return to buildings list</a></p>
+    <p><a href="<?= Backend::url('dimti/elvenar/buildings') ?>"
+          class="btn btn-default"><?= \Lang::get('dimti.elvenar::lang.buttons.return_to_buildings_list') ?></a></p>
 
 <?php endif ?>

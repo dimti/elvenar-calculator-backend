@@ -6,3 +6,9 @@ columns:
     id:
         label: ID
         searchable: true
+    name:
+        label: dimti.elvenar::lang.fields.name
+        searchable: true
+    building_type:
+        label: dimti.elvenar::lang.fields.building_type
+        type: partial

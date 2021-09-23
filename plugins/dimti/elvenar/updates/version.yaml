@@ -1,3 +1,6 @@
 1.0.1:
     - 'First version of elvenar calculator api'
     - create_buildings_table.php
+1.0.2:
+    - '+ building type into building table'
+    - migration102.php

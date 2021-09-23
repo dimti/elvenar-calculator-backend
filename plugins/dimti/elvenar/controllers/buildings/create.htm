@@ -1,6 +1,7 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('dimti/elvenar/buildings') ?>">Buildings</a></li>
+        <li><a href="<?= Backend::url('dimti/elvenar/buildings') ?>"
+            ><?= \Lang::get('dimti.elvenar::lang.common.buildings') ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -19,21 +20,23 @@
                     type="submit"
                     data-request="onSave"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="Creating Building..."
+                    data-load-indicator="<?= \Lang::get('dimti.elvenar::lang.buttons.creating_building...') ?>"
                     class="btn btn-primary">
-                    Create
+                    <?= \Lang::get('dimti.elvenar::lang.buttons.create') ?>
                 </button>
                 <button
                     type="button"
                     data-request="onSave"
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="Creating Building..."
+                    data-load-indicator="<?= \Lang::get('dimti.elvenar::lang.buttons.creating_building') ?>"
                     class="btn btn-default">
-                    Create and Close
+                    <?= \Lang::get('dimti.elvenar::lang.buttons.create_and_close') ?>
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('dimti/elvenar/buildings') ?>">Cancel</a>
+                    <?= \Lang::get('dimti.elvenar::lang.buttons.or') ?> <a
+                            href="<?= Backend::url('dimti/elvenar/buildings') ?>"
+                    ><?= \Lang::get('dimti.elvenar::lang.buttons.cancel') ?></a>
                 </span>
             </div>
         </div>
@@ -43,6 +46,7 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('dimti/elvenar/buildings') ?>" class="btn btn-default">Return to buildings list</a></p>
+    <p><a href="<?= Backend::url('dimti/elvenar/buildings') ?>"
+          class="btn btn-default"><?= \Lang::get('dimti.elvenar::lang.buttons.return_to_buildings_list') ?></a></p>
 
 <?php endif ?>
