@@ -1,0 +1,5 @@
+title: 'dimti.elvenar::lang.common.sorting.levels'
+modelClass: Dimti\Elvenar\Models\Level
+nameFrom: label
+toolbar:
+    buttons: reorder_toolbar

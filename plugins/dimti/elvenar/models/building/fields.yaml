@@ -5,14 +5,26 @@ fields:
         disabled: true
         type: text
     name:
-        label: dimti.elvenar::lang.fields.name
+        label: 'dimti.elvenar::lang.fields.name'
         span: left
         type: text
         required: true
     building_type:
-        label: dimti.elvenar::lang.fields.building_type
+        label: 'dimti.elvenar::lang.fields.building_type'
         span: left
         type: dropdown
         options: getBuildingTypeOptions
         required: true
-        emptyOption: dimti.elvenar::lang.fields.choose_option
+        emptyOption: 'dimti.elvenar::lang.fields.choose_option'
+    givers:
+        type: partial
+        trigger:
+            action: show
+            field: building_type
+            condition: value[giver]
+    deducts:
+        type: partial
+        trigger:
+            action: show
+            field: building_type
+            condition: value[deduct]

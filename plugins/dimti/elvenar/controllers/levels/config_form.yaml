@@ -1,0 +1,10 @@
+name: 'dimti.elvenar::lang.common.for_level'
+form: $/dimti/elvenar/models/level/fields.yaml
+modelClass: Dimti\Elvenar\Models\Level
+defaultRedirect: dimti/elvenar/levels
+create:
+    redirect: 'dimti/elvenar/levels/update/:id'
+    redirectClose: dimti/elvenar/levels
+update:
+    redirect: dimti/elvenar/levels
+    redirectClose: dimti/elvenar/levels

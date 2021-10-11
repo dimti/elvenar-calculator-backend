@@ -71,7 +71,20 @@ class Building extends Model
     public $hasOneThrough = [];
     public $hasManyThrough = [];
     public $belongsTo = [];
-    public $belongsToMany = [];
+    public $belongsToMany = [
+        'givers' => [
+            Level::class,
+            'table' => 'dimti_elvenar_building_level',
+            'pivot' => ['population', 'culture'],
+            'pivotModel' => BuildingLevelGiverPivot::class
+        ],
+        'deducts' => [
+            Level::class,
+            'table' => 'dimti_elvenar_building_level',
+            'pivot' => ['population', 'culture'],
+            'pivotModel' => BuildingLevelDeductPivot::class
+        ],
+    ];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];

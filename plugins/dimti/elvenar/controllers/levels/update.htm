@@ -1,7 +1,7 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('dimti/elvenar/buildings') ?>"
-            ><?= e(trans('dimti.elvenar::lang.common.buildings')) ?></a></li>
+        <li><a href="<?= Backend::url('dimti/elvenar/levels') ?>"
+            ><?= e(trans('dimti.elvenar::lang.common.levels')) ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -21,40 +21,38 @@
                     data-request="onSave"
                     data-request-data="redirect:0"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="<?= e(trans('dimti.elvenar::lang.buttons.saving_building')) ?>"
+                    data-load-indicator="<?= e(trans('dimti.elvenar::lang.levels.saving_building')) ?>"
                     class="btn btn-primary">
-                    <?= e(trans('dimti.elvenar::lang.buttons.save')) ?>
+                    <?= e(trans('backend::lang.form.save')) ?>
                 </button>
                 <button
                     type="button"
                     data-request="onSave"
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="<?= e(trans('dimti.elvenar::lang.buttons.saving_building')) ?>"
+                    data-load-indicator="<?= e(trans('dimti.elvenar::lang.levels.saving_building')) ?>"
                     class="btn btn-default">
-                    <?= e(trans('dimti.elvenar::lang.buttons.save_and_close')) ?>
+                    <?= e(trans('backend::lang.form.save_and_close')) ?>
                 </button>
                 <button
                     type="button"
                     class="oc-icon-trash-o btn-icon danger pull-right"
                     data-request="onDelete"
-                    data-load-indicator="<?= e(trans('dimti.elvenar::lang.buttons.buildings.deleting')) ?>"
-                    data-request-confirm="<?= e(trans('dimti.elvenar::lang.buttons.buildings.are_you_sure_delete_this')) ?>">
+                    data-load-indicator="<?= e(trans('dimti.elvenar::lang.levels.buildings.deleting')) ?>"
+                    data-request-confirm="<?= e(trans('dimti.elvenar::lang.levels.buildings.are_you_sure_delete_this')) ?>">
                 </button>
+
                 <span class="btn-text">
-                    <?= e(trans('dimti.elvenar::lang.buttons.or')) ?> <a
-                            href="<?= Backend::url('dimti/elvenar/buildings') ?>"
-                    ><?= e(trans('dimti.elvenar::lang.buttons.cancel')) ?></a>
+                    <?= e(trans('dimti.elvenar::lang.levels.or')) ?> <a
+                            href="<?= Backend::url('dimti/elvenar/levels') ?>"
+                    ><?= e(trans('dimti.elvenar::lang.levels.cancel')) ?></a>
                 </span>
             </div>
         </div>
-
     <?= Form::close() ?>
 
 <?php else: ?>
-
-    <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('dimti/elvenar/buildings') ?>" class="btn btn-default"
-        ><?= e(trans('dimti.elvenar::lang.buttons.buildings.return_to_list')) ?></a></p>
-
+    <p class="flash-message static error"><?= e(trans($this->fatalError)) ?></p>
+    <p><a href="<?= Backend::url('dimti/elvenar/levels') ?>" class="btn btn-default"
+        ><?= e(trans('dimti.elvenar::lang.levels.buildings.return_to_list')) ?></a></p>
 <?php endif ?>

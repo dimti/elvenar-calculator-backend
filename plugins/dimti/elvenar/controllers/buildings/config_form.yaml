@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Building
+name: 'dimti.elvenar::lang.common.for_building'
 
 # Model Form Field configuration
 form: $/dimti/elvenar/models/building/fields.yaml

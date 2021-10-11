@@ -1,0 +1,5 @@
+fields:
+    label:
+        label: 'dimti.elvenar::lang.fields.label'
+        span: auto
+        type: text

@@ -3,6 +3,7 @@
 use Backend\Behaviors\FormController;
 use Backend\Behaviors\ImportExportController;
 use Backend\Behaviors\ListController;
+use Backend\Behaviors\RelationController;
 use BackendMenu;
 use Backend\Classes\Controller;
 
@@ -18,11 +19,13 @@ class Buildings extends Controller
         FormController::class,
         ListController::class,
         ImportExportController::class,
+        RelationController::class,
     ];
 
     public $formConfig = 'config_form.yaml';
     public $listConfig = 'config_list.yaml';
     public $importExportConfig = 'config_import_export.yaml';
+    public $relationConfig = 'config_relation.yaml';
 
     public function __construct()
     {

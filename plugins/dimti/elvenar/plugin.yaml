@@ -1,21 +1,25 @@
 plugin:
-  name: dimti.elvenar::lang.common.plugin_name
-  author: 'dimti[dot]ru'
-  icon: oc-icon-pencil
-  homepage: 'https://github.com/dimti/elvenar-calculator-backend.git'
+    name: 'dimti.elvenar::lang.common.plugin_name'
+    author: 'dimti[dot]ru'
+    icon: oc-icon-pencil
+    homepage: 'https://github.com/dimti/elvenar-calculator-backend.git'
 navigation:
-  elvenar:
-    label: dimti.elvenar::lang.common.elvenar
-    url: dimti/elvenar/buildings
-    icon: icon-pencil
-    order: 500
-    permissions:
-      - 'dimti.elvenar.*'
-    sideMenu:
-      buildings:
-        label: dimti.elvenar::lang.common.building
+    elvenar:
+        label: 'dimti.elvenar::lang.common.elvenar'
         url: dimti/elvenar/buildings
-        icon: icon-cart-plus
-        order: 10
+        icon: icon-pencil
+        order: 500
         permissions:
-          - 'dimti.elvenar.*'
+            - 'dimti.elvenar.*'
+        sideMenu:
+            buildings:
+                label: 'dimti.elvenar::lang.common.buildings'
+                url: dimti/elvenar/buildings
+                icon: icon-cart-plus
+                order: 10
+                permissions:
+                    - 'dimti.elvenar.*'
+            elvenar-levels:
+                label: 'dimti.elvenar::lang.common.levels'
+                url: dimti/elvenar/levels
+                icon: icon-dot-circle-o
