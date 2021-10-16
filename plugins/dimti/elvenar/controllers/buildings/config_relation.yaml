@@ -1,62 +1,47 @@
-givers:
-  label: 'dimti.elvenar::lang.common.givers'
+residence:
+  label: 'dimti.elvenar::lang.common.residence'
+  manage:
+    list: _relation_building_type_manage_list.yaml
+    defaultSort:
+      column: sort_order
+      direction: asc
   view:
     toolbarButtons: add|remove
-    list:
-      columns:
-        label:
-          label: 'dimti.elvenar::lang.fields.label'
-        pivot[population]:
-          label: 'dimti.elvenar::lang.common.population'
-        pivot[culture]:
-          label: 'dimti.elvenar::lang.common.culture'
-  manage:
-    list:
-      columns:
-        label:
-          label: Label
+    list: _relation_building_type_view_list.yaml
+    defaultSort:
+      column: sort_order
+      direction: asc
   pivot:
-    form:
-      fields:
-        pivot[population]:
-          label: 'dimti.elvenar::lang.common.population'
-          default: 0
-          type: number
-          span: left
-        pivot[culture]:
-          label: 'dimti.elvenar::lang.common.culture'
-          default: 0
-          type: number
-          span: left
+    form: _relation_building_type_pivot_form.yaml
 
-deducts:
-  label: 'dimti.elvenar::lang.common.deducts'
+culture:
+  label: 'dimti.elvenar::lang.common.culture'
+  manage:
+    list: _relation_building_type_manage_list.yaml
+    defaultSort:
+      column: sort_order
+      direction: asc
   view:
     toolbarButtons: add|remove
-    list:
-      columns:
-        label:
-          label: 'dimti.elvenar::lang.fields.label'
-        pivot[population]:
-          label: 'dimti.elvenar::lang.common.population'
-        pivot[culture]:
-          label: 'dimti.elvenar::lang.common.culture'
-  manage:
-    list:
-      columns:
-        label:
-          label: 'dimti.elvenar::lang.fields.label'
+    list: _relation_building_type_view_list.yaml
+    defaultSort:
+      column: sort_order
+      direction: asc
   pivot:
-    form:
-      fields:
-        pivot[population]:
-          label: 'dimti.elvenar::lang.common.population'
-          default: 0
-          type: number
-          span: left
-        pivot[culture]:
-          label: 'dimti.elvenar::lang.common.culture'
-          default: 0
-          type: number
-          span: left
+    form: _relation_building_type_pivot_form.yaml
 
+manufacture:
+  label: 'dimti.elvenar::lang.common.manufacture'
+  manage:
+    list: _relation_building_type_manage_list.yaml
+    defaultSort:
+      column: sort_order
+      direction: asc
+  view:
+    toolbarButtons: add|remove
+    list: _relation_building_type_view_list.yaml
+    defaultSort:
+      column: sort_order
+      direction: asc
+  pivot:
+    form: _relation_building_type_pivot_form.yaml

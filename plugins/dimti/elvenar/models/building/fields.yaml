@@ -16,15 +16,21 @@ fields:
         options: getBuildingTypeOptions
         required: true
         emptyOption: 'dimti.elvenar::lang.fields.choose_option'
-    givers:
+    residence:
         type: partial
         trigger:
             action: show
             field: building_type
-            condition: value[giver]
-    deducts:
+            condition: value[residence]
+    culture:
         type: partial
         trigger:
             action: show
             field: building_type
-            condition: value[deduct]
+            condition: value[culture]
+    manufacture:
+        type: partial
+        trigger:
+            action: show
+            field: building_type
+            condition: value[manufacture]

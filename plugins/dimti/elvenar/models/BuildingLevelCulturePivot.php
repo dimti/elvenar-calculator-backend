@@ -1,16 +1,13 @@
 <?php namespace Dimti\Elvenar\Models;
 
 use Winter\Storm\Database\Pivot;
-use Winter\Storm\Database\Traits\Nullable;
 
 /**
  * Model
  */
-class BuildingLevelDeductPivot extends Pivot
+class BuildingLevelCulturePivot extends Pivot
 {
     use \October\Rain\Database\Traits\Validation;
-
-    use Nullable;
 
     /*
      * Disable timestamps by default.
@@ -18,10 +15,6 @@ class BuildingLevelDeductPivot extends Pivot
      */
     public $timestamps = false;
 
-    public $nullable = [
-        'population',
-        'culture',
-    ];
 
     /**
      * @var string The database table used by the model.
@@ -32,7 +25,7 @@ class BuildingLevelDeductPivot extends Pivot
      * @var array Validation rules
      */
     public $rules = [
-        'population' => 'numeric|max:0',
-        'culture' => 'numeric|max:0',
+        'population' => 'numeric|min:0',
+        'culture' => 'numeric|min:0',
     ];
 }

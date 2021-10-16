@@ -2,7 +2,7 @@
 
 use Dimti\Elvenar\Classes\BuildingType;
 
-class DeductBuildingType extends BuildingType
+class ManufactureBuildingType extends BuildingType
 {
 
 }

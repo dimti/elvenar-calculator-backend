@@ -1,0 +1,5 @@
+columns:
+  label:
+    label: Label
+  sort_order:
+    invisible: true

@@ -72,17 +72,23 @@ class Building extends Model
     public $hasManyThrough = [];
     public $belongsTo = [];
     public $belongsToMany = [
-        'givers' => [
+        'residence' => [
             Level::class,
             'table' => 'dimti_elvenar_building_level',
             'pivot' => ['population', 'culture'],
-            'pivotModel' => BuildingLevelGiverPivot::class
+            'pivotModel' => BuildingLevelResidencePivot::class
         ],
-        'deducts' => [
+        'culture' => [
             Level::class,
             'table' => 'dimti_elvenar_building_level',
             'pivot' => ['population', 'culture'],
-            'pivotModel' => BuildingLevelDeductPivot::class
+            'pivotModel' => BuildingLevelCulturePivot::class
+        ],
+        'manufacture' => [
+            Level::class,
+            'table' => 'dimti_elvenar_building_level',
+            'pivot' => ['population', 'culture'],
+            'pivotModel' => BuildingLevelManufacturePivot::class
         ],
     ];
     public $morphTo = [];
@@ -95,7 +101,7 @@ class Building extends Model
      * @param BuildingType $buildingType
      * @throws \ErrorException
      */
-    final public function setBuildingTypeAttribute(BuildingType $buildingType): void
+    final public function setBuildingType(BuildingType $buildingType): void
     {
         $this->attributes['building_type'] = $buildingType->getBuildingType();
     }

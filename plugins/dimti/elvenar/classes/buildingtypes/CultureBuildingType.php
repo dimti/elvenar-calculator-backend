@@ -2,7 +2,7 @@
 
 use Dimti\Elvenar\Classes\BuildingType;
 
-class GiverBuildingType extends BuildingType
+class CultureBuildingType extends BuildingType
 {
 
 }

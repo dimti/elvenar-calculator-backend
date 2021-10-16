@@ -1,0 +1,9 @@
+columns:
+  label:
+    label: 'dimti.elvenar::lang.fields.label'
+  pivot[population]:
+    label: 'dimti.elvenar::lang.common.population'
+  pivot[culture]:
+    label: 'dimti.elvenar::lang.common.culture'
+  sort_order:
+    invisible: true

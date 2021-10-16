@@ -11,7 +11,7 @@ class BuilderTableCreateDimtiElvenarLevels extends Migration
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
-            $table->string('label', 3);
+            $table->string('label', 5);
             $table->integer('sort_order')->nullable();
         });
     }

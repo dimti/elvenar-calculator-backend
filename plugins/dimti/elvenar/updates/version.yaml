@@ -2,11 +2,11 @@
     - 'First version of elvenar calculator api'
     - create_buildings_table.php
 1.0.2:
-    - '+ building type into building table'
-    - migration102.php
-1.0.3:
     - 'Created table dimti_elvenar_levels'
     - builder_table_create_dimti_elvenar_levels.php
-1.0.4:
+1.0.3:
     - 'Created table dimti_elvenar_building_level'
     - builder_table_create_dimti_elvenar_building_level.php
+1.0.4:
+    - '+ levels seeder'
+    - seeder104.php

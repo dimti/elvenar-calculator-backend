@@ -2,7 +2,6 @@ columns:
     label:
         label: 'dimti.elvenar::lang.fields.label'
         type: text
+        sortable: false
     sort_order:
-        label: 'dimti.elvenar::lang.fields.sorting'
-        type: number
-        sortable: true
+        invisible: true
