@@ -30,6 +30,7 @@ return [
         'name' => 'Name',
         'sorting' => 'Sorting',
         'label' => 'Label',
+        'no_levels' => 'No improvements building',
     ],
     'buttons' => [
         'delete_selected' => 'Delete selected',

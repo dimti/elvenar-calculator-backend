@@ -16,6 +16,10 @@ fields:
         options: getBuildingTypeOptions
         required: true
         emptyOption: 'dimti.elvenar::lang.fields.choose_option'
+    no_levels:
+        type: checkbox
+        label: 'dimti.elvenar::lang.fields.no_levels'
+        span: right
     residence:
         type: partial
         trigger:

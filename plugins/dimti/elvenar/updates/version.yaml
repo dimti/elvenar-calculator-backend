@@ -10,3 +10,6 @@
 1.0.4:
     - '+ levels seeder'
     - seeder104.php
+1.0.5:
+    - '+ no_levels into building table'
+    - migration105.php
