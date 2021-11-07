@@ -12,3 +12,6 @@ columns:
     building_type:
         label: 'dimti.elvenar::lang.fields.building_type'
         type: partial
+    no_levels:
+        label: 'dimti.elvenar::lang.fields.no_levels'
+        type: switch

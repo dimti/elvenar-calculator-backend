@@ -4,3 +4,10 @@ scopes:
     modelClass: Dimti\Elvenar\Models\Building
     options: getBuildingTypeOptions
     conditions: building_type in (:filtered)
+  no_levels:
+    label: dimti.elvenar::lang.fields.no_levels
+    type: switch
+    default: 0
+    conditions:
+      - no_levels <> 1
+      - no_levels = 1

@@ -37,5 +37,6 @@ package-lock.json
 /plugins/winter
 /plugins/octobro
 /plugins/dimti/listextend
+/plugins/dimti/groupfields
 
 # Additional assets dist ignores

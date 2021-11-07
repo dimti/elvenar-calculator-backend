@@ -4,8 +4,10 @@ use Backend\Behaviors\FormController;
 use Backend\Behaviors\ImportExportController;
 use Backend\Behaviors\ListController;
 use Backend\Behaviors\RelationController;
+use Backend\Widgets\Lists;
 use BackendMenu;
 use Backend\Classes\Controller;
+use Dimti\Elvenar\Models\Building;
 
 /**
  * Buildings Back-end Controller
@@ -32,5 +34,24 @@ class Buildings extends Controller
         parent::__construct();
 
         BackendMenu::setContext('Dimti.Elvenar', 'elvenar', 'buildings');
+    }
+
+    /**
+     * @param $widget
+     * @param $field
+     * @param $model
+     * @see https://wintercms.com/docs/backend/relations#extend-manage-widget
+     */
+    public function relationExtendManageWidget(Lists $widget, string $field, Building $model)
+    {
+        if (!in_array($field, ['residence', 'culture', 'manufacture'])) {
+            return;
+        }
+
+        if (post('Building.no_levels')) {
+            $widget->addFilter(function ($query) {
+                $query->whereLabel('I');
+            });
+        }
     }
 }

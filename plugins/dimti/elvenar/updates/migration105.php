@@ -8,14 +8,14 @@ class Migration105 extends Migration
 {
     public function up()
     {
-         Schema::create('dimti_elvenar_table', function (Blueprint $table) {
+         Schema::table('dimti_elvenar_buildings', function (Blueprint $table) {
              $table->unsignedSmallInteger('no_levels')->nullable()->default(0);
          });
     }
 
     public function down()
     {
-        Schema::create('dimti_elvenar_table', function (Blueprint $table) {
+        Schema::table('dimti_elvenar_buildings', function (Blueprint $table) {
             $table->dropColumn('no_levels');
         });
     }
