@@ -23,6 +23,8 @@ return [
         'sorting' => [
             'levels' => 'Sorting levels',
         ],
+        'user_buildings' => 'User buildings',
+        'for_user_building' => 'User building',
     ],
     'fields' => [
         'building_type' => 'Building type',
@@ -31,6 +33,9 @@ return [
         'sorting' => 'Sorting',
         'label' => 'Label',
         'no_levels' => 'No improvements building',
+        'building' => 'Building',
+        'user' => 'User',
+        'level' => 'Level',
     ],
     'buttons' => [
         'delete_selected' => 'Delete selected',
@@ -59,6 +64,15 @@ return [
             'saving' => 'Saving level...',
             'deleting' => 'Deleting level...',
             'are_you_sure_delete_this' => 'Delete this level?',
+        ],
+        'user_buildings' => [
+            'new' => 'New user building',
+            'are_you_sure_delete_selected' => 'Are you sure you want to delete the selected user buildings?',
+            'return_to_list' => 'Return to user building list',
+            'creating' => 'Creating user building...',
+            'saving' => 'Saving user building...',
+            'deleting' => 'Deleting user building...',
+            'are_you_sure_delete_this' => 'Delete this user building?',
         ],
     ],
 ];

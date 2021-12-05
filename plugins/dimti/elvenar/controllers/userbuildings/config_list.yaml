@@ -1,0 +1,12 @@
+list: $/dimti/elvenar/models/userbuilding/columns.yaml
+modelClass: Dimti\Elvenar\Models\UserBuilding
+title: 'dimti.elvenar::lang.common.user_building'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'dimti/elvenar/userbuildings/update/:id'

@@ -1,0 +1,10 @@
+name: 'dimti.elvenar::lang.common.for_user_building'
+form: $/dimti/elvenar/models/userbuilding/fields.yaml
+modelClass: Dimti\Elvenar\Models\UserBuilding
+defaultRedirect: dimti/elvenar/userbuildings
+create:
+    redirect: 'dimti/elvenar/userbuildings/update/:id'
+    redirectClose: dimti/elvenar/userbuildings
+update:
+    redirect: dimti/elvenar/userbuildings
+    redirectClose: dimti/elvenar/userbuildings

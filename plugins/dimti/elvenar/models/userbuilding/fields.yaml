@@ -1,0 +1,14 @@
+fields:
+    user:
+        label: 'dimti.elvenar::lang.fields.user'
+        span: auto
+        type: relation
+    building:
+        label: 'dimti.elvenar::lang.fields.building'
+        span: auto
+        type: relation
+    level:
+        label: 'dimti.elvenar::lang.fields.level'
+        span: auto
+        type: relation
+        nameFrom: label

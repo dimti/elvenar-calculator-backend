@@ -13,3 +13,6 @@
 1.0.5:
     - '+ no_levels into building table'
     - migration105.php
+1.0.6:
+    - '+ table dimti_elvenar_user_buildings'
+    - builder_table_create_dimti_elvenar_user_buildings.php

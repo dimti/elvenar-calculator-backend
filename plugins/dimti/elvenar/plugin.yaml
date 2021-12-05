@@ -19,7 +19,11 @@ navigation:
                 order: 10
                 permissions:
                     - 'dimti.elvenar.*'
-            elvenar-levels:
+            elvenar_levels:
                 label: 'dimti.elvenar::lang.common.levels'
                 url: dimti/elvenar/levels
                 icon: icon-dot-circle-o
+            user_buildings:
+                label: 'dimti.elvenar::lang.common.user_buildings'
+                url: dimti/elvenar/userbuildings
+                icon: icon-navicon

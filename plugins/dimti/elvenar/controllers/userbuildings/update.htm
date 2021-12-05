@@ -1,7 +1,7 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('dimti/elvenar/buildings') ?>"
-            ><?= e(trans('dimti.elvenar::lang.common.buildings')) ?></a></li>
+        <li><a href="<?= Backend::url('dimti/elvenar/userbuildings') ?>"
+            ><?= e(trans('dimti.elvenar::lang.common.user_buildings')) ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -21,7 +21,7 @@
                     data-request="onSave"
                     data-request-data="redirect:0"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="<?= e(trans('dimti.elvenar::lang.buttons.buildings.saving')) ?>"
+                    data-load-indicator="<?= e(trans('dimti.elvenar::lang.buttons.user_buildings.saving')) ?>"
                     class="btn btn-primary">
                     <?= e(trans('dimti.elvenar::lang.buttons.save')) ?>
                 </button>
@@ -30,7 +30,7 @@
                     data-request="onSave"
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="<?= e(trans('dimti.elvenar::lang.buttons.buildings.saving')) ?>"
+                    data-load-indicator="<?= e(trans('dimti.elvenar::lang.buttons.user_buildings.saving')) ?>"
                     class="btn btn-default">
                     <?= e(trans('dimti.elvenar::lang.buttons.save_and_close')) ?>
                 </button>
@@ -41,20 +41,18 @@
                     data-load-indicator="<?= e(trans('dimti.elvenar::lang.buttons.buildings.deleting')) ?>"
                     data-request-confirm="<?= e(trans('dimti.elvenar::lang.buttons.buildings.are_you_sure_delete_this')) ?>">
                 </button>
+
                 <span class="btn-text">
                     <?= e(trans('dimti.elvenar::lang.buttons.or')) ?> <a
-                            href="<?= Backend::url('dimti/elvenar/buildings') ?>"
+                            href="<?= Backend::url('dimti/elvenar/userbuildings') ?>"
                     ><?= e(trans('dimti.elvenar::lang.buttons.cancel')) ?></a>
                 </span>
             </div>
         </div>
-
     <?= Form::close() ?>
 
 <?php else: ?>
-
-    <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('dimti/elvenar/buildings') ?>" class="btn btn-default"
+    <p class="flash-message static error"><?= e(trans($this->fatalError)) ?></p>
+    <p><a href="<?= Backend::url('dimti/elvenar/userbuildings') ?>" class="btn btn-default"
         ><?= e(trans('dimti.elvenar::lang.buttons.buildings.return_to_list')) ?></a></p>
-
 <?php endif ?>

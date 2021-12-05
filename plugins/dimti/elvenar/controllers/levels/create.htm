@@ -1,7 +1,7 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
         <li><a href="<?= Backend::url('dimti/elvenar/levels') ?>"
-            ><?= e(trans('dimti.elvenar::lang.common.levels') ?></a></li>
+            ><?= e(trans('dimti.elvenar::lang.common.levels'))?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -20,7 +20,7 @@
                     type="submit"
                     data-request="onSave"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="<?= e(trans('dimti.elvenar::lang.buttons.levels.creating...') ?>"
+                    data-load-indicator="<?= e(trans('dimti.elvenar::lang.buttons.levels.creating...')) ?>"
                     class="btn btn-primary">
                     <?= e(trans('backend::lang.form.create')) ?>
                 </button>
@@ -29,12 +29,14 @@
                     data-request="onSave"
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="<?= e(trans('dimti.elvenar::lang.buttons.levels.creating') ?>"
+                    data-load-indicator="<?= e(trans('dimti.elvenar::lang.buttons.levels.creating')) ?>"
                     class="btn btn-default">
-                    <?= e(trans('backend::lang.form.create_and_close')) ?>
+                    <?= e(trans('dimti.elvenar::lang.buttons.create_and_close')) ?>
                 </button>
                 <span class="btn-text">
-                    <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('dimti/elvenar/levels') ?>"><?= e(trans('backend::lang.form.cancel')) ?></a>
+                    <?= e(trans('dimti.elvenar::lang.buttons.or')) ?> <a
+                            href="<?= Backend::url('dimti/elvenar/levels') ?>"
+                    ><?= e(trans('dimti.elvenar::lang.buttons.cancel')) ?></a>
                 </span>
             </div>
         </div>
@@ -44,5 +46,5 @@
 <?php else: ?>
     <p class="flash-message static error"><?= e(trans($this->fatalError)) ?></p>
     <p><a href="<?= Backend::url('dimti/elvenar/levels') ?>" class="btn btn-default"
-        ><?= e(trans('dimti.elvenar::lang.buttons.levels.return_to_list') ?></a></p>
+        ><?= e(trans('dimti.elvenar::lang.buttons.levels.return_to_list')) ?></a></p>
 <?php endif ?>

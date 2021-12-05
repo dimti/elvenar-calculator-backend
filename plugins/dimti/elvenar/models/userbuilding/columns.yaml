@@ -1,0 +1,16 @@
+columns:
+    id:
+        label: ID
+        type: number
+    user:
+        label: 'dimti.elvenar::lang.fields.user'
+        relation: user
+        select: concat(name, ' ', surname)
+    building:
+        label: 'dimti.elvenar::lang.fields.building'
+        relation: building
+        select: name
+    level:
+        label: 'dimti.elvenar::lang.fields.level'
+        relation: level
+        select: label

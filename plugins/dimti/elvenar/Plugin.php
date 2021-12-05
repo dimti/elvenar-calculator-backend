@@ -1,6 +1,7 @@
 <?php namespace Dimti\Elvenar;
 
 use Backend;
+use Dimti\Elvenar\Classes\Registration\BootExtensions;
 use System\Classes\PluginBase;
 
 /**
@@ -8,7 +9,9 @@ use System\Classes\PluginBase;
  */
 class Plugin extends PluginBase
 {
-    public $require = ['Octobro.API'];
+    use BootExtensions;
+
+    public $require = ['Octobro.API', 'RainLab.User'];
 
     /**
      * Returns information about this plugin.
@@ -42,7 +45,7 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-
+        $this->registerExtensions();
     }
 
     /**
