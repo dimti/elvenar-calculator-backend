@@ -1,0 +1,25 @@
+columns:
+    player_id:
+        label: 'dimti.elvenar::lang.fields.player_id'
+        type: number
+        searchable: true
+    user:
+        label: 'dimti.elvenar::lang.fields.user'
+        relation: user
+        select: concat(name, ' ', surname)
+    nick:
+        label: 'dimti.elvenar::lang.common.nick'
+        type: text
+        searchable: true
+    rank:
+        label: 'dimti.elvenar::lang.common.rank'
+        type: number
+    score:
+        label: 'dimti.elvenar::lang.common.score'
+        type: number
+    chapter:
+        label: 'dimti.elvenar::lang.common.chapter'
+        type: text
+    expansions:
+        label: expansions
+        type: text

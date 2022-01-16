@@ -1,0 +1,8 @@
+
+user_buildings:
+  label: 'dimti.elvenar::lang.common.user_buildings'
+  view:
+    toolbarButtons: create|delete
+    list: _relation_user_buildings_view_list.yaml
+  manage:
+    form: _relation_user_buildings_manage_form.yaml

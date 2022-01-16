@@ -1,0 +1,15 @@
+fields:
+    player_id:
+        label: 'dimti.elvenar::lang.fields.player_id'
+        span: auto
+        type: number
+    user:
+        label: 'dimti.elvenar::lang.fields.user'
+        span: auto
+        type: relation
+    nick:
+        label: 'dimti.elvenar::lang.common.nick'
+        span: auto
+        type: text
+    user_buildings.php@update:
+        type: partial

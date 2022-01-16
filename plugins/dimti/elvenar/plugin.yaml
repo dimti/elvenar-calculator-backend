@@ -27,3 +27,7 @@ navigation:
                 label: 'dimti.elvenar::lang.common.user_buildings'
                 url: dimti/elvenar/userbuildings
                 icon: icon-navicon
+            user_profiles:
+                label: 'dimti.elvenar::lang.common.user_profiles'
+                url: dimti/elvenar/userprofiles
+                icon: icon-play

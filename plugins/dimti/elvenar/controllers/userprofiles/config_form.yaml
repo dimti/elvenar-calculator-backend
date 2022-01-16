@@ -1,0 +1,10 @@
+name: 'dimti.elvenar::lang.common.for_user_profile'
+form: $/dimti/elvenar/models/userprofile/fields.yaml
+modelClass: Dimti\Elvenar\Models\UserProfile
+defaultRedirect: dimti/elvenar/userprofiles
+create:
+    redirect: 'dimti/elvenar/userprofiles/update/:id'
+    redirectClose: dimti/elvenar/userprofiles
+update:
+    redirect: dimti/elvenar/userprofiles
+    redirectClose: dimti/elvenar/userprofiles

@@ -1,7 +1,7 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('dimti/elvenar/userbuildings') ?>"
-            ><?= e(trans('dimti.elvenar::lang.common.user_buildings')) ?></a></li>
+        <li><a href="<?= Backend::url('dimti/elvenar/userprofiles') ?>"
+            ><?= e(trans('dimti.elvenar::lang.common.user_profiles')) ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -20,7 +20,7 @@
                     type="submit"
                     data-request="onSave"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="<?= e(trans('dimti.elvenar::lang.buttons.user_buildings.creating')) ?>"
+                    data-load-indicator="<?= e(trans('dimti.elvenar::lang.buttons.user_profiles.creating...')) ?>"
                     class="btn btn-primary">
                     <?= e(trans('backend::lang.form.create')) ?>
                 </button>
@@ -29,13 +29,12 @@
                     data-request="onSave"
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="<?= e(trans('dimti.elvenar::lang.buttons.user_buildings.creating')) ?>"
+                    data-load-indicator="<?= e(trans('dimti.elvenar::lang.buttons.user_profiles.creating')) ?>"
                     class="btn btn-default">
                     <?= e(trans('dimti.elvenar::lang.buttons.create_and_close')) ?>
                 </button>
                 <span class="btn-text">
-                    <?= e(trans('dimti.elvenar::lang.buttons.or')) ?> <a
-                            href="<?= Backend::url('dimti/elvenar/userbuildings') ?>"
+                    <?= e(trans('dimti.elvenar::lang.buttons.or')) ?> <a href="<?= Backend::url('dimti/elvenar/userprofiles') ?>"
                     ><?= e(trans('dimti.elvenar::lang.buttons.cancel')) ?></a>
                 </span>
             </div>
@@ -45,6 +44,6 @@
 
 <?php else: ?>
     <p class="flash-message static error"><?= e(trans($this->fatalError)) ?></p>
-    <p><a href="<?= Backend::url('dimti/elvenar/userbuildings') ?>" class="btn btn-default"
-        ><?= e(trans('dimti.elvenar::lang.buttons.user_buildings.return_to_list')) ?></a></p>
+    <p><a href="<?= Backend::url('dimti/elvenar/userprofiles') ?>" class="btn btn-default"
+        ><?= e(trans('dimti.elvenar::lang.buttons.user_profiles.return_to_list')) ?></a></p>
 <?php endif ?>

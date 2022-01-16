@@ -1,0 +1,9 @@
+columns:
+  building:
+    label: 'dimti.elvenar::lang.fields.building'
+    relation: building
+    select: name
+  level_id:
+    label: 'dimti.elvenar::lang.fields.level'
+    relation: level
+    select: label
